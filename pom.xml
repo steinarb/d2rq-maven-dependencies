@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+ <modelVersion>4.0.0</modelVersion>
+
+ <groupId>de.fuberlin.wiwiss</groupId>
+ <artifactId>d2rq-maven-dependencies</artifactId>
+ <version>0.8.2-SNAPSHOT</version>
+ <packaging>pom</packaging>
+
+ <name>d2rq maven dependencies</name>
+ <url>http://d2rq.org</url>
+
+ <properties>
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+ </properties>
+
+ <build>
+  <plugins>
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-install-plugin</artifactId>
+    <version>2.5.2</version>
+    <executions>
+     <execution>
+      <!-- Install joseki-3.4.4.jar from neighbouring git repository into the Maven local cache -->
+      <id>install-d2rq-missing-maven-dependencies</id>
+      <phase>install</phase>
+      <configuration>
+       <file>joseki-3.4.4.jar</file>
+       <groupId>org.joseki</groupId>
+       <artifactId>joseki</artifactId>
+       <version>3.4.4</version>
+       <packaging>jar</packaging>
+      </configuration>
+      <goals>
+       <goal>install-file</goal>
+      </goals>
+     </execution>
+    </executions>
+   </plugin>
+  </plugins>
+ </build>
+</project>
