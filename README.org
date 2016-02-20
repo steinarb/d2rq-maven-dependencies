@@ -1,0 +1,7 @@
+* What's this?
+
+This repository was created to hold the unsatisfied maven dependencies of the [[https://github.com/steinarb/d2rq-maven][mavenized d2rq]] project.
+
+At the time of writing the only dependency not satisfied by maven central, is the joseki-3.4.4.jar.
+
+The joseki-3.4.4.jar file will be installed in the local maven cache by the d2rq-maven/pom.xml and to make this possible, this repository must be cloned next to the d2rq-maven project.
