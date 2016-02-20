@@ -5,3 +5,10 @@ This repository was created to hold the unsatisfied maven dependencies of the [[
 At the time of writing the only dependency not satisfied by maven central, is the joseki-3.4.4.jar.
 
 The joseki-3.4.4.jar file will be installed in the local maven cache by the d2rq-maven/pom.xml and to make this possible, this repository must be cloned next to the d2rq-maven project.
+
+To use this repository to install the dependencies in the maven local cache, do:
+#+BEGIN_EXAMPLE
+git clone https://github.com/steinarb/d2rq-maven-dependencies.git
+cd d2rq-maven-dependencies
+mvn clean
+#+END_EXAMPLE
